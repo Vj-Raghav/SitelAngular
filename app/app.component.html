@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/home']">Blog</a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+  data-target="#navbarSupportedContent">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" [routerLink]="['/home']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/list']">Posts</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+      role="button" data-toggle="dropdown"
+      >Contact Us</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="dropdown-item" href="https://www.facebook.com">Facebook</a>
+        <a class="dropdown-item" href="https://twitter.com">Twitter</a>
+        <a class="dropdown-item" href="https://www.instagram.com">Instagram</a>
+      </div>
+    </li>
+  </ul>
+</div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>

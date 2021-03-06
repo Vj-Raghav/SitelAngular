@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>New Post</h1>
+  <hr>
+  <h1>Create New Blog Post:</h1>
+  <form [formGroup]="createForm" (ngSubmit)="saveForm()" class="form">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" formControlName="title" placeholder="Enter Title">
+      <span class="error-message"
+       *ngIf="!createForm.controls.title.valid && createForm.controls.title.dirty">
+        Please fill out this field
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" formControlName="author" placeholder="Enter Author">
+      <span class="error-message"
+       *ngIf="!createForm.controls.author.valid && createForm.controls.author.dirty">
+        Please fill out this field
+      </span>
+    </div>
+    <div class="form-group">
+      <label for="post">Post:</label>
+      <textarea class="form-control" formControlName="post" placeholder="Enter Content"></textarea>
+      <span class="error-message"
+       *ngIf="!createForm.controls.post.valid && createForm.controls.post.dirty">
+       Please fill out this field
+      </span>
+    </div>
+    <button class="btn btn-primary" type="submit"
+    [disabled]="!createForm.valid">Post</button>
+  </form>
+</div>
